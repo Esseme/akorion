@@ -58,13 +58,13 @@ public class MainFragment extends Fragment {
                 int month = cldr.get(Calendar.MONTH);
                 int year = cldr.get(Calendar.YEAR);
                 // date picker dialog
-                pickerDialog = new DatePickerDialog(context,
+                pickerDialog = new DatePickerDialog(getActivity(),
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                                 date.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
                                 editor.putString("ITEM_DATE",dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
-                                editor.commit();
+                                editor.apply();
                             }
                         }, year, month, day);
                 pickerDialog.show();

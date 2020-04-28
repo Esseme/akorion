@@ -38,8 +38,6 @@ public class SecondFragment extends Fragment {
         TextView qty = view.findViewById(R.id.qty);
         qty.setText(preferences.getString("ITEM_QTY", " "));
         TextView date = view.findViewById(R.id.itemDate);
-        //TODO: Date needs to be formated
-//        date.setText(String.format(LocalDateTime(preferences.getString("ITEM_DATE", " "))));
         date.setText(preferences.getString("ITEM_DATE", " "));
         return view;
     }
